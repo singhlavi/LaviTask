@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+// we are using
+
+// operator
+// variable 
+// nesting
+// mixin
+// ampersand
+
+html{
+    font-size: 100%;
+}
+$bg-color:#1769aa;
+$fontZ: 23px;
+@mixin text-aria() {
+    width: 100%;
+    padding: 24px;
+    resize: vertical;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.main_header{
+width: 100vw;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+place-items: center;
+h1{
+    color:$bg-color;
+    font: 10rem+10rem;
+ &:hover{
+     color: black;
+ }   
+}
+p{
+    color:$bg-color;
+    font: 10rem+10rem;
+   &:hover{
+        color: black;
+    }   
+}
+}
+
+.form {
+    width: 40vw;
+    margin-left: 562px;
+   align-items: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+.head {
+    width: 50vw;
+    margin-top: 35px;
+    height: 15vh;
+    margin-left: 852px;
+    color:$bg-color;
+
+}
+
+
+input[type=text] {
+    @include text-aria;
+}
+
+input[type=email] {
+    @include text-aria;
+}
+
+input[type=password] {
+    @include text-aria;
+}
+// .home{
+//     align-items:center;
+//    columns:$bg-color;
+//    padding: 100px;
+   
+// }
+.Home{
+    // 
+    margin-left: auto;
+    color: white;
+    font-size:$fontZ ;
+}
+.add{
+    margin-left: 16px;
+    color: white;
+    font-size: $fontZ;
+}
+.list{
+    margin-left:10+6px;
+    color: white;
+    font-size: $fontZ;
+}

@@ -1,18 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "nehaww",
-      "email": "n@gmail.com",
-      "password": "nha123"
-    },
-    {
-      "id": "eFJJ5dEW",
-      "name": "ajay ",
-      "email": "a@gmail.com",
-      "password": "Aj!2345"
-    },
-    {
       "id": "rL5ixMp",
       "name": "lavi",
       "email": "l@gmail.com",
@@ -31,10 +19,22 @@
       "password": "dd"
     },
     {
-      "id": "KWpIL2cU",
-      "name": "asas",
+      "id": "6BLY_NgF",
+      "name": "lavi",
       "email": "lavi@gmail.com",
-      "password": "sadd"
+      "password": "csdcsdf655656"
+    },
+    {
+      "id": "qwziNalG",
+      "name": "",
+      "email": "lavi@gmail.com",
+      "password": "gfdg"
+    },
+    {
+      "id": "ek6PUWwL",
+      "name": "dsa",
+      "email": "",
+      "password": ""
     }
   ]
 }

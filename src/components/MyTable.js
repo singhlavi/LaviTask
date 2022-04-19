@@ -12,28 +12,32 @@ import { deleteUserSlice } from '../redux/slice/users';
 import Button from '@mui/material/Button';
 import { DELETE_USER_BY_ID, GET_USERS } from '../redux/types';
 import { ClassSharp } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 export default function MyTable() {
    
     const rows = useSelector(state => state.users)
     const dispatch = useDispatch()
     React.useEffect(() => dispatch({ type: GET_USERS }), [])
+
+    
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell align="right">Email</TableCell>
-                        <TableCell align="right">Password</TableCell>
-                        <TableCell align="right">Edit</TableCell>
-                        <TableCell align="right">Delete</TableCell>
+                        <TableCell><b>Name</b></TableCell>
+                        <TableCell align="right"><b>Email</b></TableCell>
+                        <TableCell align="right"><b>Password</b></TableCell>
+                       <TableCell align="right"><b>Edit</b></TableCell>
+                        <TableCell align="right"><b>Delete</b></TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {rows.map((row) => (
                         <TableRow
                             key={row.id}
+                           
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
@@ -42,10 +46,10 @@ export default function MyTable() {
                             <TableCell align="right">{row.email}</TableCell>
                             <TableCell align="right">{row.password}</TableCell>
                             <TableCell align="right">
-                                <Button onClick={() => dispatch(setUserSlice(row))} fullWidth variant="contained">Edit</Button>;
+                                <a href={`/MyForm/${row.id}`}> <Button onClick={() => dispatch(setUserSlice(row))} fullWidth variant="contained" className='btn'>Edit</Button></a>
                             </TableCell>
                             <TableCell align="right">
-                                <Button onClick={() => dispatch({ type: DELETE_USER_BY_ID, id: row.id })} fullWidth variant="contained">Delete</Button>;
+                                <Button onClick={() => dispatch({ type: DELETE_USER_BY_ID, id: row.id })} fullWidth variant="contained" className='btn'>Delete</Button>
                             </TableCell>
                         </TableRow>
                     ))}

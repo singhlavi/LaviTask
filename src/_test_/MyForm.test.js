@@ -4,18 +4,5 @@ test('sum function test case', () => {
    })
 
 
-// import { iteratorSymbol } from "immer/dist/internal";
-// import React from "react";
-// import { ReactDOM } from "react-dom";
-// import App from "../App";
 
-
-
-
-// it("rendering without careshing", ()=>{
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App />,div);
-//   ReactDOM.unmountComponentAtNode(div);
-
-// });
 
