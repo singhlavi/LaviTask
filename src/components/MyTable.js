@@ -46,7 +46,7 @@ export default function MyTable() {
                             <TableCell align="right">{row.email}</TableCell>
                             <TableCell align="right">{row.password}</TableCell>
                             <TableCell align="right">
-                                <a href={`/MyForm/${row.id}`}> <Button onClick={() => dispatch(setUserSlice(row))} fullWidth variant="contained" className='btn'>Edit</Button></a>
+                                <a href={`/EditForm/${row.id}`}> <Button  fullWidth variant="contained" className='btn'>Edit</Button></a>
                             </TableCell>
                             <TableCell align="right">
                                 <Button onClick={() => dispatch({ type: DELETE_USER_BY_ID, id: row.id })} fullWidth variant="contained" className='btn'>Delete</Button>

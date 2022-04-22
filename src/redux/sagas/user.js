@@ -11,8 +11,8 @@ export function* getUsersSaga() {
 }
 
 export function* getUserByIdSaga(action) {
-    yield getUserByIdAPI(action.id)
-    yield put(setUserSlice(action.id))
+    const resp = yield getUserByIdAPI(action.id)
+    yield put(setUserSlice(resp.data))
 }
 export function* createUserSaga(action) {
     yield createUserAPI(action.user)

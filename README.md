@@ -72,7 +72,7 @@ touch src/redux/slice/{user,users}.js
 ```
 
 ```
-touch src/components/{MyForm,MyTable}.js
+touch src/components/{AddForm,MyTable}.js
 ```
 
 Staet JSON Server

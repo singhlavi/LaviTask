@@ -15,7 +15,7 @@ const Navbar = () => {
                 <Container maxWidth="xl">
                     <Toolbar >
                        <div className='Home'> <NavLink to="/">Home</NavLink></div>
-                       <div className='add'> <NavLink to="/MyForm">User Add</NavLink></div>
+                       <div className='add'> <NavLink to="/AddForm">User Add</NavLink></div>
                         <div className='list'><NavLink to="/MyTable">All User</NavLink></div>
                     </Toolbar>
                 </Container>

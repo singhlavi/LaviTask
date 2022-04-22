@@ -2,7 +2,8 @@ import * as React from 'react';
 
 import Grid from "@mui/material/Grid"
 import { Provider } from "react-redux"
-import MyForm from "./components/MyForm"
+import AddForm from "./components/AddForm"
+import EditForm from "./components/EditForm"
 import MyTable from "./components/MyTable"
 import store from './store'
 import Container from '@mui/material/Container';
@@ -32,11 +33,11 @@ const App = () => {
                     <Route exact path="/MyTable">
                         <MyTable />
                     </Route>
-                    <Route exact path="/MyForm">
-                        <MyForm />
+                    <Route exact path="/AddForm">
+                        <AddForm />
                     </Route>
-                    <Route exact path="/MyForm/:id">
-                        <MyForm />
+                    <Route exact path="/EditForm/:id">
+                        <EditForm />
                     </Route>
                 </Switch>
             </Router>
